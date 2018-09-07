@@ -147,7 +147,7 @@ client.on("message", message => {
 });
 
 input.on('submit', function(data) {
-	client.guilds.find(g => g.name == guild).channels.find(c => c.name == channel).send(data);
+	client.guilds.find(g => g.name === guild).channels.find(c => c.name === channel).send(data);
 	input.clearValue();
 	screen.render();
 	input.focus();
