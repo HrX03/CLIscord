@@ -134,7 +134,7 @@ client.on('ready', ready => {
 });
 
 client.on("message", message => {
-	if(message.channel.type !== "text" && message.guild.name === guild && message.channel.name === channel) {
+	if(message.channel.type !== "dm" && message.guild.name === guild && message.channel.name === channel) {
 		let user = ``;
 		if(message.author.username === client.user.username && message.author.discriminator === client.user.discriminator) {
 			user = "You";
@@ -147,7 +147,7 @@ client.on("message", message => {
 });
 
 input.on('submit', function(data) {
-	client.guilds.find(g => g.name === guild).channels.find(c => c.name === channel).send(data);
+	client.guilds.find(g => g.name === guild).channels.find(c => c.name === channel).send(data).catch(err);
 	input.clearValue();
 	screen.render();
 	input.focus();
