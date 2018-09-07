@@ -14,7 +14,7 @@ Necessary installed packages:
 nodejs: from nodejs official site;
 npm: should be bundled with nodejs, eitherway search up how to install it, it's necessary;
 discord.js: run a cmd in the same folder where you downloaded the client and run "npm install discord.js --save" ;
-blessedjs: same as the discord.js method but run "npm install blessedjs --save" ;
+blessedjs: same as the discord.js method but run "npm install blessed --save" ;
 ```
 
 For using the client you need to get your token (i can't and will not guide you how to get it, google online the **new** method) and put it on a file called **config.json** on the same folder as the client that is structured like this:
